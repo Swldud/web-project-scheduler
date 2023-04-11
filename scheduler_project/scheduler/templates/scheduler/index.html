@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Schedule list</h1>
+
+<ul>
+
+    {% for schedule in schedules %}
+    
+    <li>
+        <a href=" {% url 'scheduler:detail_schedule' schedule.pk %} ">
+
+            {{ schedule.title }}
+        </a>
+    
+
+    </li>
+    
+    {% endfor %}
+
+</ul>
+
+
+{% endblock content %}

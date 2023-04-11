@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1> {{ schedule.title }}  </h1>
+
+<p>
+    작성시간:{{schedule.created_at}}
+</p>
+
+<p>
+    시간: {{schedule.time}}
+</p>
+
+<p>
+   장소: {{schedule.place}}
+</p>
+
+<p>
+    메모: {{schedule.memo}}
+</p>
+
+<div>
+    <form action="{% url 'scheduler:delete_schedule' schedule.pk %}" method ="POST">
+        {% csrf_token %}
+        <button onclick="return confirm('Are you sure to delete?')"> 
+            delete </button>
+
+    </form>
+
+</div>
+
+<div>
+    <a href="{% url 'scheduler:update_schedule' schedule.pk %}">
+        <button>update</button>
+    </a>
+</div>
+
+
+{% endblock content %}

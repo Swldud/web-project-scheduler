@@ -1,0 +1,10 @@
+asgiref==3.6.0
+Django==3.2.18
+django-extensions==3.2.1
+extensions==0.4
+pytz==2023.3
+sqlparse==0.4.3
+django-bootstrap-v5
+
+# pip freeze > requirements.txt
+# pip install -r requirements.txt
