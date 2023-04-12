@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1> April Scheduler </h1>
+
+<ul>
+
+    <table class= container>
+
+        <thead>
+            <tr>
+                <th class="red"> Sunday </th>
+                <th> Monday </th>
+                <th> Tuesday </th>
+                <th> Wednesday </th>
+                <th> Thurseday </th>
+                <th> Friday </th>
+                <th class="blue"> Saturday </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="blue"> <div>1</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="red">2</td>
+                <td>
+                    <div> 3 </div>
+                    <div>
+                        {% for daily_schedule in daily_schedules_03 %}
+                        <li>
+                            <a href="/scheduler/{{daily_schedule.pk}}">
+
+                            {{ daily_schedule.title }}
+                            </a>
+
+                        </li>
+                        {% endfor %}
+
+                    </div>
+                
+                </td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td class="blue">8</td>
+            </tr>
+            <tr>
+                <td class="red">9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>
+                    <div>12</div>
+
+                    <div>
+                        {% for daily_schedule in daily_schedules_12 %}
+                        <li>
+                            <a href="/scheduler/{{daily_schedule.pk}}">
+
+                            {{ daily_schedule.title }}
+                            </a>
+
+                        </li>
+
+
+                        {% endfor %}
+
+                    </div>
+                </td>
+                <td>13</td>
+                <td>
+
+                    <div>14</div>
+
+                    <div>
+                        {% for daily_schedule in daily_schedules_14 %}
+                        <li>
+                            <a href="/scheduler/{{daily_schedule.pk}}">
+
+                            {{ daily_schedule.title }}
+                            </a>
+
+                        </li>
+
+
+                        {% endfor %}
+
+                    </div>
+
+
+                </td>
+                <td class="blue">15</td>
+            </tr>
+            <tr>
+                <td class="red">16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td class="blue">22</td>
+            </tr>
+            <tr>
+                <td class="red">23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td class="blue">29</td>
+            </tr>
+            <tr>
+                <td class="red">
+
+                    <div> 30 </div>
+                    <div>
+                        {% for daily_schedule in daily_schedules_30 %}
+                        <li>
+                            <a href="/scheduler/{{daily_schedule.pk}}">
+
+                            {{ daily_schedule.title }}
+                            </a>
+
+                        </li>
+
+
+                        {% endfor %}
+
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="blue"></td>
+            </tr>
+        </tbody>
+            
+    </table>
+
+
+
+</ul>
+
+
+{% endblock content %}

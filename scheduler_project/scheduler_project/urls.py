@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('scheduler/', include('scheduler.urls')),
     path('ephemeris/', include('ephemeris.urls')),
+    path('accounts/', include('accounts.urls')),
 ]

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1> New Schedule </h1>
+<h1> Edit Schedule </h1>
 
 <form action="" method = "POST">
     {% csrf_token %}
@@ -9,7 +9,7 @@
     {{ form.as_p}}
 
     <div>
-        <input type="submit">
+        <button> submit </button>
     
     </div>
     

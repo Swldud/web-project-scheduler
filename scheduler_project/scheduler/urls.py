@@ -4,7 +4,10 @@ from . import views
 app_name = 'scheduler'
 
 urlpatterns = [
-    
+
+    # scheduler/month/
+    path('month/',views.month, name= 'month'),
+
     # scheduler/create/
     path('create/', views.create_schedule, name= 'create_schedule'),
 

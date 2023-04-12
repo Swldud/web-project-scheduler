@@ -10,7 +10,8 @@
     <li>
         <a href=" {% url 'scheduler:detail_schedule' schedule.pk %} ">
 
-            {{ schedule.title }}
+            {{ schedule.title }} | {{schedule.date}}
+                
         </a>
     
 
@@ -19,6 +20,5 @@
     {% endfor %}
 
 </ul>
-
 
 {% endblock content %}
