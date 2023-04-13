@@ -6,7 +6,9 @@
 <form action="/scheduler/create/" method = "POST">
     {% csrf_token %}
 
-<div>
+
+
+<div class="input-group flex-nowrap">
     <label for="date">날짜:</label>
     <input type="date" id = "date" name = "date">
 </div>
@@ -42,9 +44,5 @@
 
 
 </form>
-
-
-
-
 
 {% endblock content %}

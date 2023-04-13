@@ -1,34 +1,34 @@
 
-<nav>
-    <ul>
+    <ul class="nav nav-tabs">
         <!-- 인증 여부 상관 없이 보임 -->
-        <li>
-            <a href="/scheduler/">Main</a>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/scheduler/">Main</a>
         </li>
 
-        <li>
-            <a href="/scheduler/month/">April calender</a>
+        <li class="nav-item">
+            <a class="nav-link" href="/scheduler/month/">April calender</a>
         </li>
         
         <!-- 인증(로그인)된 사용자라면 -->
         {% if request.user.is_authenticated %}
-        <li>
-            <a href="/scheduler/create/">New</a>
+        <li class="nav-item">
+            <a class="nav-link" href="/scheduler/create/">New</a>
         </li>
         
-        <li>
-            <a href="{% url 'accounts:signout' %}">Logout</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:signout' %}">Logout</a>
         </li>
 
 
         <!-- 인증(로그인)되지 않은 사용자라면 -->
         {% else %}
-        <li>
-            <a href="{% url 'accounts:signin' %}">Login</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:signin' %}">Login</a>
         </li>
-        <li>
-            <a href="{% url 'accounts:signup' %}">Signup</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:signup' %}">Signup</a>
         </li>
         {% endif %}
     </ul>
-</nav>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
